@@ -106,8 +106,10 @@ const Projects = () => {
                     <CardDescription className="text-base mb-4">
                       {item.description}
                     </CardDescription>
-                    <Button variant="outline" size="sm">
-                      View Gallery
+                    <Button variant="outline" size="sm" asChild>
+                      <Link to={item.title === "Book Cover Designs" ? "/book-covers" : "/layout-samples"}>
+                        View Gallery
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>

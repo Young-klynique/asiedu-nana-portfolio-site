@@ -11,6 +11,8 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import FinancialLiteracyProject from "./pages/FinancialLiteracyProject";
 import TextbookAnalysisProject from "./pages/TextbookAnalysisProject";
+import BookCoverDesigns from "./pages/BookCoverDesigns";
+import LayoutSamples from "./pages/LayoutSamples";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +28,8 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/financial-literacy" element={<FinancialLiteracyProject />} />
           <Route path="/projects/textbook-analysis" element={<TextbookAnalysisProject />} />
+          <Route path="/book-covers" element={<BookCoverDesigns />} />
+          <Route path="/layout-samples" element={<LayoutSamples />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
