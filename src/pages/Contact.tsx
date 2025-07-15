@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, Linkedin, MessageSquare } from "lucide-react";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,12 +14,21 @@ const Contact = () => {
     email: "",
     message: ""
   });
+  const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
+    
+    // In a real application, you would send this data to a backend service
+    // For now, we'll simulate the form submission and show a toast
     console.log("Form submitted:", formData);
-    alert("Thank you for your message! I'll get back to you soon.");
+    
+    toast({
+      title: "Message Sent Successfully!",
+      description: "Thank you for your message! I'll get back to you within 24 hours via email.",
+    });
+    
+    // Reset form
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -105,6 +115,19 @@ const Contact = () => {
                       WhatsApp
                     </a>
                   </Button>
+                </CardContent>
+              </Card>
+              
+              {/* Message Delivery Info */}
+              <Card className="bg-blue-50 border-blue-200">
+                <CardHeader>
+                  <CardTitle className="text-blue-900">Message Delivery</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-blue-800 text-sm">
+                    <strong>Note:</strong> Messages sent through the form below are currently displayed as notifications for demo purposes. 
+                    For actual communication, please use email (asiedunanakwame500@gmail.com) or WhatsApp (+233 558 216 730).
+                  </p>
                 </CardContent>
               </Card>
             </div>

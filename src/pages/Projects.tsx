@@ -1,9 +1,9 @@
-
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BookOpen, FileText, Image, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const academicProjects = [
@@ -11,13 +11,15 @@ const Projects = () => {
       title: "Financial Literacy Among Publishing Students: A 2025 Analysis",
       description: "An in-depth research project examining financial literacy levels among Publishing Studies students and its impact on career preparedness.",
       type: "Academic Research",
-      icon: <FileText className="h-5 w-5" />
+      icon: <FileText className="h-5 w-5" />,
+      link: "/projects/financial-literacy"
     },
     {
       title: "Analysis of Ghana's Textbook Publishing Industry",
       description: "A comprehensive study of the textbook publishing landscape in Ghana, including market trends and opportunities.",
       type: "Market Analysis",
-      icon: <BookOpen className="h-5 w-5" />
+      icon: <BookOpen className="h-5 w-5" />,
+      link: "/projects/textbook-analysis"
     }
   ];
 
@@ -73,8 +75,10 @@ const Projects = () => {
                     <CardDescription className="text-base mb-4">
                       {project.description}
                     </CardDescription>
-                    <Button variant="outline" size="sm">
-                      View Details
+                    <Button variant="outline" size="sm" asChild>
+                      <Link to={project.link}>
+                        View Details
+                      </Link>
                     </Button>
                   </CardContent>
                 </Card>
