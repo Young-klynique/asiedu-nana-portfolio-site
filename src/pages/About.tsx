@@ -22,20 +22,20 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-center mb-12">About Me</h1>
-          
+
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div>
               <img
-                src="/lovable-uploads/e77403db-4651-4996-abd0-d447a22c1c0f.png"
+                src={import.meta.env.BASE_URL + "lovable-uploads/e77403db-4651-4996-abd0-d447a22c1c0f.png"}
                 alt="Asiedu Nana Kwame"
                 className="w-full max-w-sm rounded-lg mx-auto object-cover"
               />
             </div>
-            
+
             <div className="space-y-6">
               <Card>
                 <CardHeader>
@@ -46,27 +46,27 @@ const About = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    I'm a Publishing Studies student at Kwame Nkrumah University of Science and Technology, 
-                    offering B.A Publishing Studies specializing in editorial processes, book design, and 
+                    I'm a Publishing Studies student at Kwame Nkrumah University of Science and Technology,
+                    offering B.A Publishing Studies specializing in editorial processes, book design, and
                     digital content distribution. My goal is to bridge traditional publishing with modern technologies.
                   </p>
                 </CardContent>
               </Card>
-              
+
               <Card>
                 <CardHeader>
                   <CardTitle>Professional Focus</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    On the professional side, I'm deeply interested in publishing, multimedia, and AI, 
+                    On the professional side, I'm deeply interested in publishing, multimedia, and AI,
                     with a goal to build a career in digital publishing.
                   </p>
                 </CardContent>
               </Card>
             </div>
           </div>
-          
+
           {/* Skills Section */}
           <Card className="mb-8">
             <CardHeader>
@@ -85,7 +85,7 @@ const About = () => {
               </div>
             </CardContent>
           </Card>
-          
+
           {/* Experience Section */}
           <Card className="mb-8">
             <CardHeader>
@@ -96,14 +96,14 @@ const About = () => {
                 <h3 className="font-semibold">Internship at Fine Print</h3>
                 <p className="text-muted-foreground">Tema Industrial Area, Accra</p>
               </div>
-              
+
               <div>
                 <h3 className="font-semibold">Coursework</h3>
                 <p className="text-muted-foreground">Digital Publishing, Copyright Law, Typography</p>
               </div>
             </CardContent>
           </Card>
-          
+
           {/* Personal Touch */}
           <Card>
             <CardHeader>
@@ -114,7 +114,7 @@ const About = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-4">
-                When I'm not studying, I love playing football, video games, writing, and hiking. 
+                When I'm not studying, I love playing football, video games, writing, and hiking.
                 These hobbies keep me energized and inspired!
               </p>
               <div className="flex flex-wrap gap-3">
